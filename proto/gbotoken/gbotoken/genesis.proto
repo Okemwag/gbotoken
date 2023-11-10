@@ -1,0 +1,12 @@
+syntax = "proto3";
+package gbotoken.gbotoken;
+
+import "gogoproto/gogo.proto";
+import "gbotoken/gbotoken/params.proto";
+
+option go_package = "gbotoken/x/gbotoken/types";
+
+// GenesisState defines the gbotoken module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
